@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(12, 12, 32);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+.central__container{
+    display: flex;
+  
+  
+}
+
+.tittle{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.buttons__container{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.button__box{
+    background-color: rgb(12, 12, 32);
+    color: white;
+    border: none;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+.icon-btn{
+    margin-right: 6px;
+}
+
+.generator__container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(85, 85, 142);
+}
+
+.generator__textop{
+    width: 45%;
+    background-color: white;
+    color: black;
+    align-items: center;
+ 
+}
+
+.generator__textbottom{
+    width: 45%;
+    background-color: white;
+    color: black;
+    align-items: center;
+ 
+
+}
+
+.generator__paragraph{
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.button__download{
+    background-color: #2e7d32;
+    color: whitesmoke;
+    margin-top: 30px;
+    padding: 16px ;
+    border-radius: 8px;
+    border: none;
+}
+
+.generator__img{
+    width: 45%;
+    height: 350px ;
+    background-color: black;
+    border: none;
+}
+
+
+aside{
+    /* float: right; */
+    width: 20vw;
+
+}
+
+  

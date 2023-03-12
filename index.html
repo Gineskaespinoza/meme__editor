@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Código, HTML, CSS, JS, GIT, GITHUB, README, variables, Funciones, ">
+    <meta name="description"
+        content="Proyecto Editor de memes creado por Gineska Espinoza. Es una app destinada a generar memes.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e8036813bb.js" crossorigin="anonymous"></script>
+    <title>Editor de Memes</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="tittle">Generador de Memes</h1>
+        <section class="buttons__container">
+            <button class="button__box" id="button__img">
+                <i class="fas fa-file-image icon-btn"></i>Imagen
+            </button>
+            <button class="button__box" id="button__text">
+                <i class="fas fa-font icon-btn"></i>Texto
+            </button>
+            <button class="button__box" id="button__dark">
+                <i class="far fa-lightbulb"></i>Modo oscuro
+            </button>
+            <!-- <button class="button__box" id="button__light">
+                <i class=""></i>Modo Claro
+            </button> -->
+        </section>
+    </header>
+    <main class="central__container">
+        <section class="generator__container">
+            <article class="generator__textop">
+                <p class="generator__paragraph" id="generator__paragraph">TOP TEXT</p>
+            </article>
+            <figure class="generator__img">
+                <img src="#" alt="image__URL">
+            </figure>
+            <article class="generator__textbottom">
+                <p class="generator__paragraph" id="generator__paragraph">BOTTOM TEXT</p>
+            </article>
+            <button type="button" class="button__download" id="button__download">
+                <i class="fas fa-download"></i>Descargar Meme
+            </button>
+        </section>
+        <aside>
+            <article class="close__button">
+                <button class="close__btn" id="#close__btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </article>
+
+
+            <!--  IMAGE SECTION -->
+            <section class="image__container" id="#image__container">
+                <h2 class="image__subtittle">IMAGEN</h2>
+                <fieldset class="image__item">
+                    <label for="">URL</label>
+                    <input type="text" class="image__url" id="image__url">
+                </fieldset>
+            </section>
+
+            <!-- BACKGROUND SECTION -->
+            <section class="background__box" id="#background__box">
+                <h3 class="background__subtittle">FONDO</h3>
+                <fieldset class="background__box">
+                    <input type="color" id="backgroundcolor__img" value="#fff">
+                    <span id="backgroundcolor__">#color</span>
+                </fieldset>
+                <fieldset class="" id="">
+                    <select name="" id="">
+                        <option value="none">Ninguno</option>
+                        <option value="clarify">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
+                        <option value=""></option>
+                    </select>
+                </fieldset>
+            </section>
+
+            <!-- FILTERS SECTION -->
+            <section class="filters__container">
+                <h3>FILTROS</h3>
+                <fieldset class="filters__items">
+                    <label for="brightness__choice">BRILLO</label>
+                    <input type="range" id="brightness__choice" min="0" max="1" step="0.1" value="1">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="opacity__choice">OPACIDAD</label>
+                    <input type="range" id="opacity__choice" min="0" max="1" step="0.1" value="1">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="contrast__choice">CONTRASTE</label>
+                    <input type="range" id="contrast__choice" min="100" max="1000" step="1" value="100">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="blur__choice">DESENFOQUE</label>
+                    <input type="range" id="blur__choice" min="0" max="10" step="0.1" value="0">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="grayscale__choice">ESCALA DE GRISES</label>
+                    <input type="range" id="grayscale__choice" min="0" max="100" value="0">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="sepia__choice">SEPIA</label>
+                    <input type="range" id="sepia" min="0" max="100" value="0">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="hue__rotation">HUE</label>
+                    <input type="range" id="hue__rotation" min="0" max="359" value="0">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="saturation__choice">SATURADO</label>
+                    <input type="range" id="saturation__choice" min="100" max="1000" value="100" step="10">
+                </fieldset>
+                <fieldset class="filters__items">
+                    <label for="invert__choice">NEGATIVO</label>
+                    <input type="range" id="invert__choice" min="0" max="1" value="0" step="0.1">
+                </fieldset>
+                <article class="filters__reset">
+                    <button class="reset__btn" id="reset__btn">Reestablecer filtros</button>
+                </article>
+            </section>
+
+
+            <!-- TEXT SECTION -->
+            <section class="text__container">
+                <h2 class="text__tittle">TEXTO</h2>
+                <article class="text__item">
+                    <h3 class="text__subtittle">SUPERIOR</h3>
+                    <textarea name="superior__text" id="superior__text" cols="25" rows="15">TOP TEXT</textarea>
+                </article>
+                <fieldset class="text__check">
+                    <input type="checkbox" id="input__check">
+                    <label for="">Sin texto superior</label>
+                </fieldset>
+            </section>
+            <article class="tex__item">
+                <fieldset>
+                    <h3 class="text__subtittle">INFERIOR</h3>
+                    <textarea name="inferior text" class="inferior__text" id="inferior__text" cols="25"
+                        rows="15">BOTTOM TEXT</textarea>
+                </fieldset>
+                <fieldset class="text__check">
+                    <input type="checkbox" id="text__input">
+                    <label for="">Sin texto inferior</label>
+                </fieldset>
+            </article>
+            <!-- fonts -->
+            <article class="font__box">
+                <h3 class="subtittle">FUENTE</h3>
+                <select name="Familia de fuente" id="font__select" class="font__select">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman" selected="">Times New Roman</option>
+                </select>
+            </article>
+
+            <!-- font size -->
+            <fieldset class="fontsize__box">
+                <input type="number" name="font size" class="fonstsize__item" id="fontsize__item" min="10" value="60">
+            </fieldset>
+
+            <!-- alineamiento -->
+            <fieldset class="align__item" id="align__item">
+                <button class="align__btn" id="align__btn--left">
+                    <i class="fas fa-align-left" aria-hidden="true"></i>
+                </button>
+                <button class="align__btn" id="align__btn--center" aria-label="Alinear texto al centro">
+                    <i class="fas fa-align-center" aria-hidden="true"></i>
+                </button>
+                <button class="align__btn" id="align__btn--right" aria-label="Alinear texto a la derecha">
+                    <i class="fas fa-align-right" aria-hidden="true"></i>
+                </button>
+            </fieldset>
+
+            <!-- color -->
+            <section class="color__container" id="color__container">
+                <article class="color__text" id="color__text">
+                    <h4 class="subtittle">COLOR</h4>
+                    <fieldset class="color__box">
+                        <input type="color" name="text color" id="text__color" value="#fff">
+                        <span id="texts__color">#FFFFFF</span>
+                    </fieldset>
+                </article>
+                <article class="color__background" id="color__background">
+                    <h4 class="subtittle">FONDO</h4>
+                    <fieldset class="color__box">
+                        <input name="Color fondo de texto" type="color" id="background__color" value="#FFF">
+                        <span id="text__backgroundcolor">#FFFFFF</span>
+                    </fieldset>
+                </article>
+            </section>
+            <fieldset>
+                <label for="background__checkbox">Fondo Transparente</label>
+                <input type="checkbox" id="background__checkbox">
+            </fieldset>
+            <section class="contorn__box">
+                <h4 class="subtittle">CONTORNO</h4>
+                <article class="contorn__item">
+                    <button class="contorn__btn" id="btn__none">Ninguno</button>
+                    <button class="" id="btn__light">Claro</button>
+                    <button class="" id="btn__dark">Oscuro</button>
+                </article>
+            </section>
+
+            <!-- spacing -->
+            <article class="spacing__box" id="spacing__box">
+                <h4 class="subtittle">ESPACIADO</h4>
+                <fieldset class="spacing__item">
+                    <input type="number" id="spacing__input" class="spacing__input" aria-label="Espaciado" min="10" max="50" value="35">
+                </fieldset>
+            </article>
+
+            <!-- line height -->
+            <article class="line__height" id="line__height">
+                <h4 class="subtittle">INTERLINEADO</h4>
+                <select id="lineheight__input" class="lineheight__input" aria-label="Interlineado">
+                    <option value="0.8">0.8</option>
+                    <option value="1" selected="">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </article>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        <p>Hecho por Gineska Espinoza</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
