@@ -8,7 +8,7 @@
     <meta name="keywords" content="Código, HTML, CSS, JS, GIT, GITHUB, README, variables, Funciones, ">
     <meta name="description"
         content="Proyecto Editor de memes creado por Gineska Espinoza. Es una app destinada a generar memes.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CCS/styles.css">
     <script src="https://kit.fontawesome.com/e8036813bb.js" crossorigin="anonymous"></script>
     <title>Editor de Memes</title>
 </head>
@@ -53,80 +53,89 @@
                 </button>
             </article>
 
-
             <!--  IMAGE SECTION -->
-            <section class="image__container" id="#image__container">
-                <h2 class="image__subtittle">IMAGEN</h2>
-                <fieldset class="image__item">
-                    <label for="">URL</label>
-                    <input type="text" class="image__url" id="image__url">
-                </fieldset>
-            </section>
+            <section class="image__content" id="image__content">
+                <section class="image__container" id="image__container">
+                    <h2 class="image__subtittle">IMAGEN</h2>
+                    <fieldset class="image__item">
+                        <label for="">URL</label>
+                        <input type="text" class="image__url" id="image__url">
+                    </fieldset>
+                </section>
 
-            <!-- BACKGROUND SECTION -->
-            <section class="background__box" id="#background__box">
-                <h3 class="background__subtittle">FONDO</h3>
-                <fieldset class="background__box">
-                    <input type="color" id="backgroundcolor__img" value="#fff">
-                    <span id="backgroundcolor__">#color</span>
-                </fieldset>
-                <fieldset class="" id="">
-                    <select name="" id="">
-                        <option value="none">Ninguno</option>
-                        <option value="clarify">Aclarar</option>
-                        <option value="darken">Oscurecer</option>
-                        <option value="difference">Diferencia</option>
-                        <option value="luminosity">Luminosidad</option>
-                        <option value="multiply">Multiplicar</option>
-                        <option value=""></option>
-                    </select>
-                </fieldset>
-            </section>
+                <!-- BACKGROUND SECTION -->
+                <section class="background__box" id="#background__box">
+                    <h3 class="subtittle">FONDO</h3>
+                    <section class="background__options">
+                        <fieldset class="background__item">
+                            <input type="color" id="backgroundcolor__img" value="#fff">
+                            <span id="backgroundcolor__span">#color</span>
+                        </fieldset>
+                        <fieldset class="background__select" id="background__select">
+                            <select name="" id="background__option">
+                                <option value="none">Ninguno</option>
+                                <option value="clarify">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
+                                <option value=""></option>
+                            </select>
+                        </fieldset>
+                    </section>
+                </section>
 
-            <!-- FILTERS SECTION -->
-            <section class="filters__container">
-                <h3>FILTROS</h3>
-                <fieldset class="filters__items">
-                    <label for="brightness__choice">BRILLO</label>
-                    <input type="range" id="brightness__choice" min="0" max="1" step="0.1" value="1">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="opacity__choice">OPACIDAD</label>
-                    <input type="range" id="opacity__choice" min="0" max="1" step="0.1" value="1">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="contrast__choice">CONTRASTE</label>
-                    <input type="range" id="contrast__choice" min="100" max="1000" step="1" value="100">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="blur__choice">DESENFOQUE</label>
-                    <input type="range" id="blur__choice" min="0" max="10" step="0.1" value="0">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="grayscale__choice">ESCALA DE GRISES</label>
-                    <input type="range" id="grayscale__choice" min="0" max="100" value="0">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="sepia__choice">SEPIA</label>
-                    <input type="range" id="sepia" min="0" max="100" value="0">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="hue__rotation">HUE</label>
-                    <input type="range" id="hue__rotation" min="0" max="359" value="0">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="saturation__choice">SATURADO</label>
-                    <input type="range" id="saturation__choice" min="100" max="1000" value="100" step="10">
-                </fieldset>
-                <fieldset class="filters__items">
-                    <label for="invert__choice">NEGATIVO</label>
-                    <input type="range" id="invert__choice" min="0" max="1" value="0" step="0.1">
-                </fieldset>
-                <article class="filters__reset">
-                    <button class="reset__btn" id="reset__btn">Reestablecer filtros</button>
-                </article>
-            </section>
 
+                <!-- FILTERS SECTION -->
+                <section class="filters__container">
+                    <h3 class="subtittle">FILTROS</h3>
+                    <fieldset class="filters__items">
+                        <label for="filters__name">BRILLO</label>
+                        <input type="range" class="filter__choice" id="brightness__choice" min="0" max="1" step="0.1"
+                            value="1">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filters__name">OPACIDAD</label>
+                        <input type="range" class="filter__choice" id="opacity__choice" min="0" max="1" step="0.1"
+                            value="1">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filters__name">CONTRASTE</label>
+                        <input type="range" class="filter__choice" id="contrast__choice" min="100" max="1000" step="1"
+                            value="100">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filter__name">DESENFOQUE</label>
+                        <input type="range" class="filter__choice" id="blur__choice" min="0" max="10" step="0.1"
+                            value="0">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filter__name">ESCALA DE GRISES</label>
+                        <input type="range" class="filter__choice" id="grayscale__choice" min="0" max="100" value="0">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filter__name">SEPIA</label>
+                        <input type="range" class="filter__choice" id="sepia" min="0" max="100" value="0">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filters__name">HUE</label>
+                        <input type="range" class="filter__choice" id="hue__rotation" min="0" max="359" value="0">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filters">SATURADO</label>
+                        <input type="range" class="filter__choice" id="saturation__choice" min="100" max="1000"
+                            value="100" step="10">
+                    </fieldset>
+                    <fieldset class="filters__items">
+                        <label for="filters__name">NEGATIVO</label>
+                        <input type="range" class="filter__choice" id="invert__choice" min="0" max="1" value="0"
+                            step="0.1">
+                    </fieldset>
+                    <article class="filters__reset">
+                        <button class="reset__btn" id="reset__btn">Reestablecer filtros</button>
+                    </article>
+                </section>
+            </section>
 
             <!-- TEXT SECTION -->
             <section class="text__container">
@@ -169,7 +178,7 @@
                 <input type="number" name="font size" class="fonstsize__item" id="fontsize__item" min="10" value="60">
             </fieldset>
 
-            <!-- alineamiento -->
+            <!-- aling-->
             <fieldset class="align__item" id="align__item">
                 <button class="align__btn" id="align__btn--left">
                     <i class="fas fa-align-left" aria-hidden="true"></i>
@@ -200,8 +209,8 @@
                 </article>
             </section>
             <fieldset>
-                <label for="background__checkbox">Fondo Transparente</label>
-                <input type="checkbox" id="background__checkbox">
+                <label for="checkbox background">Fondo Transparente</label>
+                <input type="checkbox" class="checkbox__background" id="checkbox__background">
             </fieldset>
             <section class="contorn__box">
                 <h4 class="subtittle">CONTORNO</h4>
@@ -216,7 +225,8 @@
             <article class="spacing__box" id="spacing__box">
                 <h4 class="subtittle">ESPACIADO</h4>
                 <fieldset class="spacing__item">
-                    <input type="number" id="spacing__input" class="spacing__input" aria-label="Espaciado" min="10" max="50" value="35">
+                    <input type="number" id="spacing__input" class="spacing__input" aria-label="Espaciado" min="10"
+                        max="50" value="35">
                 </fieldset>
             </article>
 
@@ -230,14 +240,14 @@
                     <option value="1.5">1.5</option>
                     <option value="2">2</option>
                     <option value="2.5">2.5</option>
-                </article>
+            </article>
             </section>
         </aside>
     </main>
     <footer>
         <p>Hecho por Gineska Espinoza</p>
     </footer>
-    <script src="main.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 
 </html>
