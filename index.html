@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Código, HTML, CSS, JS, GIT, GITHUB, README, variables, Funciones, ">
+    <meta name="keywords" content="Code, HTML, CSS, JS, GIT, GITHUB, README, variables, functions, ">
     <meta name="description"
-        content="Proyecto Editor de memes creado por Gineska Espinoza. Es una app destinada a generar memes.">
+        content="Meme editor project created by Gineska Espinoza. It is an app designed to generate memes.">
+    <link rel="shortcut icon" href="assets/raspberrypi.svg" type="image/x-icon">
     <link rel="stylesheet" href="CCS/styles.css">
     <script src="https://kit.fontawesome.com/e8036813bb.js" crossorigin="anonymous"></script>
-    <title>Editor de Memes</title>
+    <title>Meme editor</title>
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
         <h1 class="tittle">Generador de Memes</h1>
         <section class="buttons__container">
@@ -46,6 +48,8 @@
                 <i class="fas fa-download"></i>Descargar Meme
             </button>
         </section>
+
+         <!-- ASIDE -->
         <aside>
             <article class="close__button">
                 <button class="close__btn" id="#close__btn">
@@ -58,7 +62,7 @@
                 <section class="image__container" id="image__container">
                     <h2 class="image__subtittle">IMAGEN</h2>
                     <fieldset class="image__item">
-                        <label for="">URL</label>
+                        <h3 class="subtittle">URL</h3>
                         <input type="text" class="image__url" id="image__url">
                     </fieldset>
                 </section>
@@ -68,11 +72,11 @@
                     <h3 class="subtittle">FONDO</h3>
                     <section class="background__options">
                         <fieldset class="background__item">
-                            <input type="color" id="backgroundcolor__img" value="#fff">
+                            <input type="color" class="backgroundcolor__img" id="backgroundcolor__img" value="#fff">
                             <span id="backgroundcolor__span">#color</span>
                         </fieldset>
                         <fieldset class="background__select" id="background__select">
-                            <select name="" id="background__option">
+                            <select name="" class="background__option" id="background__option">
                                 <option value="none">Ninguno</option>
                                 <option value="clarify">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
@@ -84,7 +88,6 @@
                         </fieldset>
                     </section>
                 </section>
-
 
                 <!-- FILTERS SECTION -->
                 <section class="filters__container">
@@ -143,105 +146,105 @@
                 <article class="text__item">
                     <h3 class="text__subtittle">SUPERIOR</h3>
                     <textarea name="superior__text" id="superior__text" cols="25" rows="15">TOP TEXT</textarea>
+                    <fieldset class="text__check">
+                        <input type="checkbox" id="input__check">
+                        <label for="">Sin texto superior</label>
+                    </fieldset>
                 </article>
-                <fieldset class="text__check">
-                    <input type="checkbox" id="input__check">
-                    <label for="">Sin texto superior</label>
+                <article class="tex__item">
+                    <fieldset>
+                        <h3 class="text__subtittle">INFERIOR</h3>
+                        <textarea name="inferior text" class="inferior__text" id="inferior__text" cols="25"
+                            rows="15">BOTTOM TEXT</textarea>
+                    </fieldset>
+                    <fieldset class="text__check">
+                        <input type="checkbox" id="text__input">
+                        <label for="">Sin texto inferior</label>
+                    </fieldset>
+                </article>
+
+                <!-- fonts -->
+                <article class="font__box">
+                    <h3 class="subtittle">FUENTE</h3>
+                    <select name="Familia de fuente" id="font__select" class="font__select">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman" selected="">Times New Roman</option>
+                    </select>
+                </article>
+
+                <!-- font size -->
+                <fieldset class="fontsize__box">
+                    <input type="number" name="font size" class="fonstsize__item" id="fontsize__item" min="10"
+                        value="60">
                 </fieldset>
-            </section>
-            <article class="tex__item">
+
+                <!-- aling-->
+                <fieldset class="align__item" id="align__item">
+                    <button class="align__btn" id="align__btn--left">
+                        <i class="fas fa-align-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="align__btn" id="align__btn--center" aria-label="Alinear texto al centro">
+                        <i class="fas fa-align-center" aria-hidden="true"></i>
+                    </button>
+                    <button class="align__btn" id="align__btn--right" aria-label="Alinear texto a la derecha">
+                        <i class="fas fa-align-right" aria-hidden="true"></i>
+                    </button>
+                </fieldset>
+
+                <!-- color -->
+                <section class="color__container" id="color__container">
+                    <article class="color__text" id="color__text">
+                        <h4 class="subtittle">COLOR</h4>
+                        <fieldset class="color__box">
+                            <input type="color" name="text color" id="text__color" value="#fff">
+                            <span id="texts__color">#FFFFFF</span>
+                        </fieldset>
+                    </article>
+                    <article class="color__background" id="color__background">
+                        <h4 class="subtittle">FONDO</h4>
+                        <fieldset class="color__box">
+                            <input name="Color fondo de texto" type="color" id="background__color" value="#FFF">
+                            <span id="text__backgroundcolor">#FFFFFF</span>
+                        </fieldset>
+                    </article>
+                </section>
                 <fieldset>
-                    <h3 class="text__subtittle">INFERIOR</h3>
-                    <textarea name="inferior text" class="inferior__text" id="inferior__text" cols="25"
-                        rows="15">BOTTOM TEXT</textarea>
+                    <label for="checkbox background">Fondo Transparente</label>
+                    <input type="checkbox" class="checkbox__background" id="checkbox__background">
                 </fieldset>
-                <fieldset class="text__check">
-                    <input type="checkbox" id="text__input">
-                    <label for="">Sin texto inferior</label>
-                </fieldset>
-            </article>
-            <!-- fonts -->
-            <article class="font__box">
-                <h3 class="subtittle">FUENTE</h3>
-                <select name="Familia de fuente" id="font__select" class="font__select">
-                    <option value="Arial">Arial</option>
-                    <option value="Arial Black">Arial Black</option>
-                    <option value="Helvetica">Helvetica</option>
-                    <option value="Impact">Impact</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="Times New Roman" selected="">Times New Roman</option>
-                </select>
-            </article>
+                <section class="contorn__box">
+                    <h4 class="subtittle">CONTORNO</h4>
+                    <article class="contorn__item">
+                        <button class="contorn__btn" id="btn__none">Ninguno</button>
+                        <button class="" id="btn__light">Claro</button>
+                        <button class="" id="btn__dark">Oscuro</button>
+                    </article>
+                </section>
 
-            <!-- font size -->
-            <fieldset class="fontsize__box">
-                <input type="number" name="font size" class="fonstsize__item" id="fontsize__item" min="10" value="60">
-            </fieldset>
-
-            <!-- aling-->
-            <fieldset class="align__item" id="align__item">
-                <button class="align__btn" id="align__btn--left">
-                    <i class="fas fa-align-left" aria-hidden="true"></i>
-                </button>
-                <button class="align__btn" id="align__btn--center" aria-label="Alinear texto al centro">
-                    <i class="fas fa-align-center" aria-hidden="true"></i>
-                </button>
-                <button class="align__btn" id="align__btn--right" aria-label="Alinear texto a la derecha">
-                    <i class="fas fa-align-right" aria-hidden="true"></i>
-                </button>
-            </fieldset>
-
-            <!-- color -->
-            <section class="color__container" id="color__container">
-                <article class="color__text" id="color__text">
-                    <h4 class="subtittle">COLOR</h4>
-                    <fieldset class="color__box">
-                        <input type="color" name="text color" id="text__color" value="#fff">
-                        <span id="texts__color">#FFFFFF</span>
+                <!-- spacing -->
+                <article class="spacing__box" id="spacing__box">
+                    <h4 class="subtittle">ESPACIADO</h4>
+                    <fieldset class="spacing__item">
+                        <input type="number" id="spacing__input" class="spacing__input" aria-label="Espaciado" min="10"
+                            max="50" value="35">
                     </fieldset>
                 </article>
-                <article class="color__background" id="color__background">
-                    <h4 class="subtittle">FONDO</h4>
-                    <fieldset class="color__box">
-                        <input name="Color fondo de texto" type="color" id="background__color" value="#FFF">
-                        <span id="text__backgroundcolor">#FFFFFF</span>
-                    </fieldset>
-                </article>
-            </section>
-            <fieldset>
-                <label for="checkbox background">Fondo Transparente</label>
-                <input type="checkbox" class="checkbox__background" id="checkbox__background">
-            </fieldset>
-            <section class="contorn__box">
-                <h4 class="subtittle">CONTORNO</h4>
-                <article class="contorn__item">
-                    <button class="contorn__btn" id="btn__none">Ninguno</button>
-                    <button class="" id="btn__light">Claro</button>
-                    <button class="" id="btn__dark">Oscuro</button>
-                </article>
-            </section>
 
-            <!-- spacing -->
-            <article class="spacing__box" id="spacing__box">
-                <h4 class="subtittle">ESPACIADO</h4>
-                <fieldset class="spacing__item">
-                    <input type="number" id="spacing__input" class="spacing__input" aria-label="Espaciado" min="10"
-                        max="50" value="35">
-                </fieldset>
-            </article>
-
-            <!-- line height -->
-            <article class="line__height" id="line__height">
-                <h4 class="subtittle">INTERLINEADO</h4>
-                <select id="lineheight__input" class="lineheight__input" aria-label="Interlineado">
-                    <option value="0.8">0.8</option>
-                    <option value="1" selected="">1</option>
-                    <option value="1.2">1.2</option>
-                    <option value="1.5">1.5</option>
-                    <option value="2">2</option>
-                    <option value="2.5">2.5</option>
-            </article>
-            </section>
+                <!-- line height -->
+                <article class="line__height" id="line__height">
+                    <h4 class="subtittle">INTERLINEADO</h4>
+                    <select id="lineheight__input" class="lineheight__input" aria-label="Interlineado">
+                        <option value="0.8">0.8</option>
+                        <option value="1" selected="">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                </article>
         </aside>
     </main>
     <footer>
