@@ -13,9 +13,20 @@ const $ = (selector) => document.querySelector(selector)
 //     }
 // })
 
+
+
+//insert top text
+
 $("#superior__text").addEventListener("input", () => {
     $("#generator__top").innerText = $("#superior__text").value 
 
+})
 
+$("#inferior__text").addEventListener("input", () => {
+    $("#generator__bottom").innerText = $("#inferior__text").value 
 
 })
+
+
+
+
