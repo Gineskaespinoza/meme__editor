@@ -25,13 +25,13 @@ body{
   }
 
    /* light mode variables:  */
-   /* [code-light="light-mode"]{
+   [code-light="light-mode"]{
     --color-primary: #e0e0e0;
     --color-secundary: #eeeeee;
     --color-background: #fafafa;
     --color-input: #e0e0e0;
     --color-text:#424242;
-}  */
+}  
 
 
   
@@ -45,6 +45,8 @@ body{
     margin-top: 20px;
     font-size: 2.5rem;
     font-weight: 800;
+    color: var(--color-text);
+    
 }
 
 .buttons__container{
@@ -55,7 +57,7 @@ body{
 
 .button__box{
     background-color: var(--color-background);
-    color: white;
+    color: var(--color-text);
     border: none;
     padding: 25px;
     font-size: var(--font-size-text)
@@ -141,6 +143,7 @@ aside{
     top: 6px;
     cursor: pointer;
     background-color: var(--color-secundary);
+  
     border: none;
 
 }
@@ -164,6 +167,7 @@ aside{
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
+    color: var(--color-text)
 }
 
 .image__item{
@@ -184,6 +188,7 @@ aside{
 .subtittle{
     font-size: var(--font-size-text);
     margin: 16px 0;
+    color: var(--color-text)
 
 }
 
@@ -215,7 +220,8 @@ aside{
 .filters__items{
     font-size: var(--font-size-text);
     border: none;
-    margin-top: 15px
+    margin-top: 15px;
+    color: var(--color-text);
     
 }
 
@@ -334,12 +340,10 @@ input[type=range].filter__choice {
     display: none;
 }  */
 
-.input__checks{
 
-}
-
-label{
+label, span{
   font-size: 12px;
+  color: var(--color-text);
 
 }
 
