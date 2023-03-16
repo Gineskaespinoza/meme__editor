@@ -14,7 +14,7 @@
     <title>Meme editor</title>
 </head>
 
-<body>
+<body code-light="light-mode" >
     <!-- HEADER -->
     <header>
         <h1 class="tittle">Generador de Memes</h1>
@@ -25,24 +25,23 @@
             <button class="button__box" id="button__text">
                 <i class="fas fa-font icon-btn"></i>Texto
             </button>
-            <button class="button__box" id="button__dark">
-                <i class="far fa-lightbulb"></i>Modo oscuro
+            <button class="button__box" id="button__dark hidden">
+                <i class="far fa-lightbulb" id="lightbulb__off"></i>Modo oscuro
             </button>
-            <!-- <button class="button__box" id="button__light">
-                <i class=""></i>Modo Claro
-            </button> -->
+            <button class="button__box" id="button__light">
+                <i class="far fa-lightbulb" id="lightbulb__on"></i>Modo Claro
+            </button>
         </section>
     </header>
     <main class="central__container">
         <section class="generator__container">
             <article class="generator__textop">
-                <p class="generator__paragraph" id="generator__paragraph">TOP TEXT</p>
+                <p class="generator__paragraph" id="generator__top" value="">TOP TEXT</p>
             </article>
-            <figure class="generator__img">
-                <img src="#" alt="image__URL">
-            </figure>
+            <div class="generator__img" id="generator__square">
+            </div>
             <article class="generator__textbottom">
-                <p class="generator__paragraph" id="generator__paragraph">BOTTOM TEXT</p>
+                <p class="generator__paragraph" id="generator__bottom">BOTTOM TEXT</p>
             </article>
             <button type="button" class="button__download" id="button__download">
                 <i class="fas fa-download"></i>Descargar Meme
@@ -68,7 +67,7 @@
                 </section>
 
                 <!-- BACKGROUND SECTION -->
-                <section class="background__box" id="#background__box">
+                <section class="background__box" id="background__box">
                     <h3 class="subtittle">FONDO</h3>
                     <section class="background__options">
                         <fieldset class="background__item">
@@ -144,21 +143,21 @@
             <section class="text__container">
                 <h2 class="text__tittle">TEXTO</h2>
                 <article class="text__item">
-                    <h3 class="text__subtittle">SUPERIOR</h3>
-                    <textarea name="superior__text" id="superior__text" cols="25" rows="15">TOP TEXT</textarea>
+                    <h3 class="subtittle">SUPERIOR</h3>
+                    <textarea name="superior__text" class= superior__text id="superior__text" cols="25" rows="15" value="TOP TEXT">TOP TEXT</textarea>
                     <fieldset class="text__check">
-                        <input type="checkbox" id="input__check">
+                        <input type="checkbox" class="input__checks" id="input__check">
                         <label for="">Sin texto superior</label>
                     </fieldset>
                 </article>
                 <article class="tex__item">
                     <fieldset>
-                        <h3 class="text__subtittle">INFERIOR</h3>
+                        <h3 class="subtittle">INFERIOR</h3>
                         <textarea name="inferior text" class="inferior__text" id="inferior__text" cols="25"
                             rows="15">BOTTOM TEXT</textarea>
                     </fieldset>
                     <fieldset class="text__check">
-                        <input type="checkbox" id="text__input">
+                        <input type="checkbox" class="input__checks" id="text__input">
                         <label for="">Sin texto inferior</label>
                     </fieldset>
                 </article>
@@ -166,7 +165,7 @@
                 <!-- fonts -->
                 <article class="font__box">
                     <h3 class="subtittle">FUENTE</h3>
-                    <select name="Familia de fuente" id="font__select" class="font__select">
+                    <select name="Familia de fuente" id="font__selector" class="font__select">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="Helvetica">Helvetica</option>
