@@ -28,11 +28,8 @@ $("#inferior__text").addEventListener("input", () => {
 
 })
 
-// generator__square 
-// input image__url
 
-// insert URL
-
+// insert background image
 $("#image__url").addEventListener("input", () => {
     const imgUrl = $("#image__url").value
     $("#generator__square").style.backgroundImage = `url(${imgUrl})`
@@ -42,6 +39,66 @@ $("#image__url").addEventListener("input", () => {
 $("#backgroundcolor__image").addEventListener("input", () => {
     $("#generator__square").style.backgroundColor = $("#backgroundcolor__image").value
 })
+
+
+// image filters:
+
+$("#brightness__choice").addEventListener("input", ()=> {
+     $("#generator__square").style.filter = `brightness(${$("#brightness__choice").value})`
+    
+})
+
+$("#opacity__choice").addEventListener("input", ()=> {
+    $("#generator__square").style.filter = `opacity(${$("#opacity__choice").value})`
+   
+})
+
+$("#contrast__choice").addEventListener("input", () => { 
+    $("#generator__square").style.filter = `contrast(${$("#contrast__choice").value}%)`
+})
+
+$("#blur__choice").addEventListener("input", () => {
+    $("#generator__square").style.filter = `blur(${$("#blur__choice").value}px)`
+})
+
+$("#grayscale__choice").addEventListener("input", () => {
+    $("#generator__square").style.filter = `grayscale(${$("#grayscale__choice").value}%)`
+})
+
+$("#sepia__choice").addEventListener("input", () => {
+    $("#generator__square").style.filter = `sepia(${$("#sepia__choice").value}%)`
+})
+
+
+// out-of-order
+$("#hue__choice").addEventListener("input", () => {
+    $("#generator__square").style.filter = `hue-rotate(${$("#hue__choice").value}%)`
+})
+
+$("#saturation__choice").addEventListener("input", () => {
+    $("#generator__square").style.filter = `saturate(${$("#saturation__choice").value}%)`
+})
+
+$("#invert__choice").addEventListener("input", () => {
+    $("#generator__square").style.filter = `invert(${$("#invert__choice").value})`
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
