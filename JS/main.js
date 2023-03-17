@@ -38,6 +38,10 @@ $("#image__url").addEventListener("input", () => {
     $("#generator__square").style.backgroundImage = `url(${imgUrl})`
 })
 
+// insert background color
+$("#backgroundcolor__image").addEventListener("input", () => {
+    $("#generator__square").style.backgroundColor = $("#backgroundcolor__image").value
+})
 
 
 
