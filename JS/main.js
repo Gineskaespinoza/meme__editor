@@ -21,10 +21,23 @@ $("#superior__text").addEventListener("input", () => {
 
 })
 
+//insert bottom text
+
 $("#inferior__text").addEventListener("input", () => {
     $("#generator__bottom").innerText = $("#inferior__text").value
 
 })
+
+// generator__square 
+// input image__url
+
+// insert URL
+
+$("#image__url").addEventListener("input", () => {
+    const imgUrl = $("#image__url").value
+    $("#generator__square").style.backgroundImage = `url(${imgUrl})`
+})
+
 
 
 

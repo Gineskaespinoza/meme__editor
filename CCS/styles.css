@@ -120,10 +120,11 @@ body{
 }
 
 .generator__img{
-    width: 45%;
+    width: 768px;
     height: 350px ;
     background-color: black;
     border: none;
+    background-size: cover; 
 }
 
 aside{
@@ -150,7 +151,7 @@ aside{
 
  .image__content{
     padding: 0 12px;
-    display: none;
+    /* display: none; */
 } 
 
 /* .generator__img{
