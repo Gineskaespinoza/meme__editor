@@ -1,5 +1,7 @@
 const $ = (selector) => document.querySelector(selector)
 
+// dark mode:
+
 $("#button__light").addEventListener("click", () => {
     const modeChange = $("body").getAttribute("code-light")
     if (modeChange) {
@@ -14,14 +16,14 @@ $("#button__light").addEventListener("click", () => {
 })
 
 
-//insert top text
+//insert top text:
 
 $("#superior__text").addEventListener("input", () => {
     $("#generator__top").innerText = $("#superior__text").value
 
 })
 
-//insert bottom text
+//insert bottom text:
 
 $("#inferior__text").addEventListener("input", () => {
     $("#generator__bottom").innerText = $("#inferior__text").value
@@ -29,13 +31,13 @@ $("#inferior__text").addEventListener("input", () => {
 })
 
 
-// insert background image
+// insert background image:
 $("#image__url").addEventListener("input", () => {
     const imgUrl = $("#image__url").value
     $("#generator__square").style.backgroundImage = `url(${imgUrl})`
 })
 
-// insert background color
+// insert background color:
 $("#backgroundcolor__image").addEventListener("input", () => {
     $("#generator__square").style.backgroundColor = $("#backgroundcolor__image").value
 })
@@ -69,10 +71,8 @@ $("#sepia__choice").addEventListener("input", () => {
     $("#generator__square").style.filter = `sepia(${$("#sepia__choice").value}%)`
 })
 
-
-// out-of-order
 $("#hue__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `hue-rotate(${$("#hue__choice").value}%)`
+    $("#generator__square").style.filter = `hue-rotate(${$("#hue__choice").value}deg)`
 })
 
 $("#saturation__choice").addEventListener("input", () => {
@@ -82,6 +82,16 @@ $("#saturation__choice").addEventListener("input", () => {
 $("#invert__choice").addEventListener("input", () => {
     $("#generator__square").style.filter = `invert(${$("#invert__choice").value})`
 })
+
+// Change background blend mode:
+
+$("#background__option").addEventListener("input", () => {
+    $("#generator__square").style.backgroundBlendMode = $("#background__option").value
+
+})
+
+
+
 
 
 

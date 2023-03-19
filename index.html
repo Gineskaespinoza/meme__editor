@@ -76,13 +76,12 @@
                         </fieldset>
                         <fieldset class="background__select" id="background__select">
                             <select name="" class="background__option" id="background__option">
-                                <option value="none">Ninguno</option>
-                                <option value="clarify">Aclarar</option>
+                                <option value="unset">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
                                 <option value="difference">Diferencia</option>
                                 <option value="luminosity">Luminosidad</option>
                                 <option value="multiply">Multiplicar</option>
-                                <option value=""></option>
                             </select>
                         </fieldset>
                     </section>
@@ -129,8 +128,7 @@
                     </fieldset>
                     <fieldset class="filters__items">
                         <label for="filters__name">NEGATIVO</label>
-                        <input type="range" class="filter__choice" id="invert__choice" min="0" max="1" value="0"
-                            step="0.1">
+                        <input type="range" class="filter__choice" id="invert__choice" min="0" max="1" value="0" step="0.1">
                     </fieldset>
                     <article class="filters__reset">
                         <button class="reset__btn" id="reset__btn">Reestablecer filtros</button>

@@ -135,6 +135,7 @@ aside{
     top: 0;
     z-index: 10;
     background-color: var(--color-secundary);
+    overflow: scroll;
 }
 
 .close__btn{
@@ -144,9 +145,7 @@ aside{
     top: 6px;
     cursor: pointer;
     background-color: var(--color-secundary);
-  
     border: none;
-
 }
 
  .image__content{
@@ -185,12 +184,10 @@ aside{
   border: none;
 }
 
-
 .subtittle{
     font-size: var(--font-size-text);
     margin: 16px 0;
     color: var(--color-text)
-
 }
 
 .background__box{
