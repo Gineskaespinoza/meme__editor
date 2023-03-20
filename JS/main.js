@@ -2,34 +2,36 @@ const $ = (selector) => document.querySelector(selector)
 
 // dark mode:
 
-$("#button__light").addEventListener("click", () => {
+$("#button__dark").addEventListener("click", () => {
     const modeChange = $("body").getAttribute("code-light")
     if (modeChange) {
-        $("#button__light").classList.remove("hidden")
-        $("#button__dark").classList.add("hidden")
+        $("#button__light").classList.add("hidden")
+        $("#button__dark").classList.remove("hidden")
         $("body").removeAttribute("code-light", "light-mode")
     } else {
-        $("#button__dark").classList.add("hidden")
-        $("#button__light").classList.remove("hidden")
+        $("#button__dark").classList.remove("hidden")
+        $("#button__light").classList.add("hidden")
         $("body").setAttribute("code-light", "light-mode")
     }
 })
 
 
-//insert top text:
+// BUTTONS
 
-$("#superior__text").addEventListener("input", () => {
-    $("#generator__top").innerText = $("#superior__text").value
-
+$("#button__img").addEventListener("click", () => {
+   if ($(".image__content").style.display = "block"){
+       $(".text__container").style.display = "none"
+   }
 })
 
-//insert bottom text:
+$("#button__text").addEventListener("click", () => {
+    if ($(".text__container").style.display = "block"){
+        $(".image__content").style.display = "none"
+    }
+ })
+ 
 
-$("#inferior__text").addEventListener("input", () => {
-    $("#generator__bottom").innerText = $("#inferior__text").value
-
-})
-
+// IMAGE SECTION
 
 // insert background image:
 $("#image__url").addEventListener("input", () => {
@@ -42,6 +44,12 @@ $("#backgroundcolor__image").addEventListener("input", () => {
     $("#generator__square").style.backgroundColor = $("#backgroundcolor__image").value
 })
 
+// Change background blend mode:
+
+$("#background__option").addEventListener("input", () => {
+    $("#generator__square").style.backgroundBlendMode = $("#background__option").value
+
+})
 
 // image filters:
 
@@ -83,14 +91,51 @@ $("#invert__choice").addEventListener("input", () => {
     $("#generator__square").style.filter = `invert(${$("#invert__choice").value})`
 })
 
-// Change background blend mode:
 
-$("#background__option").addEventListener("input", () => {
-    $("#generator__square").style.backgroundBlendMode = $("#background__option").value
+
+// SECTION TEXT
+
+//insert top text:
+
+$("#superior__text").addEventListener("input", () => {
+    $("#generator__top").innerText = $("#superior__text").value
 
 })
 
+//insert bottom text:
 
+$("#inferior__text").addEventListener("input", () => {
+    $("#generator__bottom").innerText = $("#inferior__text").value
+
+})
+
+// No top text
+$("#input__check").addEventListener("input", () => {
+    const isChecked = $("#input__check").checked
+    if (isChecked) {
+        $("#generator__top").classList.add("hidden")
+
+    } else {
+        $("#generator__top").classList.remove("hidden")
+
+    }
+
+})
+
+// FONTS
+
+$("#font__selector").addEventListener("input", () => {
+    $("#generator__top").style.fontFamily = $("#font__selector").value
+    $("#generator__bottom").style.fontFamily = $("#font__selector").value
+})
+
+// FONT SIZE
+
+$("#fontsize__item").addEventListener("input", () => {
+    $("#generator__top").style.fontSize = `${$("#fontsize__item").value}px `
+    $("#generator__bottom").style.fontSize = `${$("#fontsize__item").value}px `
+
+})
 
 
 

@@ -34,7 +34,8 @@ body{
 }  
 
 
-  
+/* HEADER */
+
 .central__container{
     display: flex;
   
@@ -46,7 +47,6 @@ body{
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--color-text);
-    
 }
 
 .buttons__container{
@@ -72,9 +72,9 @@ body{
   border-color: var(--color-text);
 
 }
-.hidden{
+/* .hidden{
   display: none;
-}
+} */
 
 
 .button__download{
@@ -86,6 +86,8 @@ body{
     border: none;
 }
 
+
+/* // MAIN */
 
 .generator__container{
     width: 100%;
@@ -150,7 +152,7 @@ aside{
 
  .image__content{
     padding: 0 12px;
-    /* display: none; */
+  
 } 
 
 /* .generator__img{
@@ -204,7 +206,7 @@ aside{
     justify-content: space-around;
 }
 
-.backgroundcolor__img, .background__option, .superior__text, .inferior__text, .font__select{
+.backgroundcolor__img, .background__option, .superior__text, .inferior__text, .font__select, .fontsize__item{
     width: 100%;
     height: 35px;
     background-color: var(--color-input);
@@ -352,4 +354,35 @@ fieldset{
 
 .text__container{
   padding: 0 12px;
+  display: none;
+}
+
+.fontsize__container{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.fontsize__btn{
+  width: 25%;
+  height: 35px;
+  background-color: var(--color-input);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  margin-bottom: 6px;
+  padding: 5px 10px;
+
+}
+
+.align__btn{
+  width: 25%;
+  height: 35px;
+  background-color: var(--color-input);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  margin-bottom: 6px;
+  padding: 5px 10px;
+
 }

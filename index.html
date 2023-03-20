@@ -25,10 +25,10 @@
             <button class="button__box" id="button__text">
                 <i class="fas fa-font icon-btn"></i>Texto
             </button>
-            <button class="button__box" id="button__dark" hidden>
+            <button class="button__box" id="button__dark">
                 <i class="far fa-lightbulb" id="lightbulb__off"></i>Modo oscuro
             </button>
-            <button class="button__box" id="button__light">
+            <button class="button__box" id="button__light" hidden>
                 <i class="far fa-lightbulb" id="lightbulb__on"></i>Modo Claro
             </button>
         </section>
@@ -66,7 +66,7 @@
                     </fieldset>
                 </section>
 
-                <!-- BACKGROUND SECTION -->
+                <!-- BACKGROUND -->
                 <section class="background__box" id="background__box">
                     <h3 class="subtittle">FONDO</h3>
                     <section class="background__options">
@@ -87,7 +87,7 @@
                     </section>
                 </section>
 
-                <!-- FILTERS SECTION -->
+                <!-- IMAGE FILTERS  -->
                 <section class="filters__container">
                     <h3 class="subtittle">FILTROS</h3>
                     <fieldset class="filters__items">
@@ -137,7 +137,7 @@
             </section>
 
             <!-- TEXT SECTION -->
-            <section class="text__container">
+            <section class="text__container" id="text__content">
                 <h2 class="text__tittle">TEXTO</h2>
                 <article class="text__item">
                     <h3 class="subtittle">SUPERIOR</h3>
@@ -156,10 +156,10 @@
                     </fieldset>
                 </article>
 
-                <!-- fonts -->
+                <!-- FONTS -->
                 <article class="font__box">
                     <h3 class="subtittle">FUENTE</h3>
-                    <select name="Familia de fuente" id="font__selector" class="font__select">
+                    <select name="Familia de fuentes" id="font__selector" class="font__select">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="Helvetica">Helvetica</option>
@@ -169,26 +169,27 @@
                     </select>
                 </article>
 
-                <!-- font size -->
-                <fieldset class="fontsize__box">
-                    <input type="number" name="font size" class="fonstsize__item" id="fontsize__item" min="10"
-                        value="60">
-                </fieldset>
-
-                <!-- aling-->
-                <fieldset class="align__item" id="align__item">
-                    <button class="align__btn" id="align__btn--left">
-                        <i class="fas fa-align-left" aria-hidden="true"></i>
-                    </button>
-                    <button class="align__btn" id="align__btn--center" aria-label="Alinear texto al centro">
-                        <i class="fas fa-align-center" aria-hidden="true"></i>
-                    </button>
-                    <button class="align__btn" id="align__btn--right" aria-label="Alinear texto a la derecha">
-                        <i class="fas fa-align-right" aria-hidden="true"></i>
-                    </button>
-                </fieldset>
-
-                <!-- color -->
+                <!-- FONTS SIZE -->
+                <article class="fontsize__container">
+                    <fieldset class="fontsize__box">
+                        <input type="number" name="font size" class="align__btn" id="fontsize__item" min="16" max="60" value="16">
+                    </fieldset>
+    
+                    <!-- ALIGN-->
+                    <fieldset class="align__item" id="align__item">
+                        <button class="align__btn" id="align__btn--left">
+                            <i class="fas fa-align-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="align__btn" id="align__btn--center" aria-label="Alinear texto al centro">
+                            <i class="fas fa-align-center" aria-hidden="true"></i>
+                        </button>
+                        <button class="align__btn" id="align__btn--right" aria-label="Alinear texto a la derecha">
+                            <i class="fas fa-align-right" aria-hidden="true"></i>
+                        </button>
+                    </fieldset>
+                </article>
+               
+                <!-- TEXT COLOR -->
                 <section class="color__container" id="color__container">
                     <article class="color__text" id="color__text">
                         <h4 class="subtittle">COLOR</h4>
@@ -218,7 +219,7 @@
                     </article>
                 </section>
 
-                <!-- spacing -->
+                <!-- TEXT SPACING -->
                 <article class="spacing__box" id="spacing__box">
                     <h4 class="subtittle">ESPACIADO</h4>
                     <fieldset class="spacing__item">
@@ -227,10 +228,10 @@
                     </fieldset>
                 </article>
 
-                <!-- line height -->
+                <!-- LINE HEIGHT -->
                 <article class="line__height" id="line__height">
                     <h4 class="subtittle">INTERLINEADO</h4>
-                    <select id="lineheight__input" class="lineheight__input" aria-label="Interlineado">
+                    <select id="lineheight__input" class="lineheight__input" aria-label="interlineado">
                         <option value="0.8">0.8</option>
                         <option value="1" selected="">1</option>
                         <option value="1.2">1.2</option>
@@ -240,6 +241,8 @@
                 </article>
         </aside>
     </main>
+
+    <!-- MAIN END -->
     <footer>
         <p>Hecho por Gineska Espinoza</p>
     </footer>
