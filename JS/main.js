@@ -16,7 +16,7 @@ $("#button__dark").addEventListener("click", () => {
 })
 
 
-// BUTTONS
+// BUTTONS HEADER
 
 $("#button__img").addEventListener("click", () => {
    if ($(".image__content").style.display = "block"){
