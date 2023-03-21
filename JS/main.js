@@ -53,44 +53,27 @@ $("#background__option").addEventListener("input", () => {
 
 // image filters:
 
-$("#brightness__choice").addEventListener("input", ()=> {
-     $("#generator__square").style.filter = `brightness(${$("#brightness__choice").value})`
+const generatorFilters = () => {
+    $("#generator__square").style.filter = `brightness(${$("#brightness__choice").value}) opacity(${$("#opacity__choice").value}) contrast(${$("#contrast__choice").value}%) blur(${$("#blur__choice").value}px) grayscale(${$("#grayscale__choice").value}%) sepia(${$("#sepia__choice").value}%) hue-rotate(${$("#hue__choice").value}deg) saturate(${$("#saturate__choice").value}%) invert(${$("#invert__choice").value})` 
+}
+
+$("#brightness__choice").addEventListener("input", generatorFilters)
+
+$("#opacity__choice").addEventListener("input", generatorFilters)
     
-})
+$("#contrast__choice").addEventListener("input", generatorFilters) 
+    
+$("#blur__choice").addEventListener("input", generatorFilters) 
 
-$("#opacity__choice").addEventListener("input", ()=> {
-    $("#generator__square").style.filter = `opacity(${$("#opacity__choice").value})`
-   
-})
+$("#grayscale__choice").addEventListener("input", generatorFilters) 
 
-$("#contrast__choice").addEventListener("input", () => { 
-    $("#generator__square").style.filter = `contrast(${$("#contrast__choice").value}%)`
-})
+$("#sepia__choice").addEventListener("input", generatorFilters) 
 
-$("#blur__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `blur(${$("#blur__choice").value}px)`
-})
+$("#hue__choice").addEventListener("input", generatorFilters)
 
-$("#grayscale__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `grayscale(${$("#grayscale__choice").value}%)`
-})
+$("#saturate__choice").addEventListener("input", generatorFilters) 
 
-$("#sepia__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `sepia(${$("#sepia__choice").value}%)`
-})
-
-$("#hue__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `hue-rotate(${$("#hue__choice").value}deg)`
-})
-
-$("#saturation__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `saturate(${$("#saturation__choice").value}%)`
-})
-
-$("#invert__choice").addEventListener("input", () => {
-    $("#generator__square").style.filter = `invert(${$("#invert__choice").value})`
-})
-
+$("#invert__choice").addEventListener("input", generatorFilters) 
 
 
 // SECTION TEXT

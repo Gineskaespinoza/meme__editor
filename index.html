@@ -14,7 +14,7 @@
     <title>Meme editor</title>
 </head>
 
-<body code-light="light-mode" >
+<body>
     <!-- HEADER -->
     <header>
         <h1 class="tittle">Generador de Memes</h1>
@@ -124,7 +124,7 @@
                     </fieldset>
                     <fieldset class="filters__items">
                         <label for="filters">SATURADO</label>
-                        <input type="range" class="filter__choice" id="saturation__choice" min="100" max="1000" value="100" step="10">
+                        <input type="range" class="filter__choice" id="saturate__choice" min="100" max="1000" value="100" step="10">
                     </fieldset>
                     <fieldset class="filters__items">
                         <label for="filters__name">NEGATIVO</label>
@@ -172,7 +172,7 @@
                 <!-- FONTS SIZE -->
                 <article class="fontsize__container">
                     <fieldset class="fontsize__box">
-                        <input type="number" name="font size" class="align__btn" id="fontsize__item" min="16" max="60" value="16">
+                        <input type="number" name="font size" class="fontsize__btn" id="fontsize__item" min="16" max="60" value="16">
                     </fieldset>
     
                     <!-- ALIGN-->
@@ -190,22 +190,23 @@
                 </article>
                
                 <!-- TEXT COLOR -->
-                <section class="color__container" id="color__container">
-                    <article class="color__text" id="color__text">
-                        <h4 class="subtittle">COLOR</h4>
-                        <fieldset class="color__box">
-                            <input type="color" name="text color" id="text__color" value="#fff">
-                            <span id="texts__color">#FFFFFF</span>
-                        </fieldset>
-                    </article>
-                    <article class="color__background" id="color__background">
-                        <h4 class="subtittle">FONDO</h4>
-                        <fieldset class="color__box">
-                            <input name="Color fondo de texto" type="color" id="background__color" value="#FFF">
-                            <span id="text__backgroundcolor">#FFFFFF</span>
-                        </fieldset>
-                    </article>
-                </section>
+               
+                    <section class="color__container" id="color__container">
+                        <article class="color__text" id="color__text">
+                            <h4 class="subtittle">COLOR</h4>
+                            <fieldset class="color__box">
+                                <input type="color" name="text color" class="text__color" id="text__color" value="#fff">
+                                <span class="texts__color">#FFFFFF</span>
+                            </fieldset>
+                        </article>
+                        <article class="color__background" id="color__background">
+                            <h4 class="subtittle">FONDO</h4>
+                            <fieldset class="color__box">
+                                <input name="Color fondo de texto" type="color" class="background__color" id="background__color" value="#FFF">
+                                <span class="text__backgroundcolor">#FFFFFF</span>
+                            </fieldset>
+                        </article>
+                    </section>
                 <fieldset>
                     <label for="checkbox background">Fondo Transparente</label>
                     <input type="checkbox" class="checkbox__background" id="checkbox__background">
