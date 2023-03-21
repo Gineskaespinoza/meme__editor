@@ -122,6 +122,33 @@ $("#fontsize__item").addEventListener("input", () => {
 
 
 
+//   text alignment
+$("#align__btn--left").addEventListener("click", () => {
+    $("#generator__top").style.textAlign = "left"
+    $("#generator__bottom").style.textAlign = "left"
+
+})
+
+$("#align__btn--center").addEventListener("click", () => {
+    $("#generator__top").style.textAlign = "center"
+    $("#generator__bottom").style.textAlign = "center"
+
+})
+
+$("#align__btn--right").addEventListener("click", () => {
+    $("#generator__top").style.textAlign = "right"
+    $("#generator__bottom").style.textAlign = "right"
+
+})
+
+
+
+
+
+
+
+
+
 
 
 
