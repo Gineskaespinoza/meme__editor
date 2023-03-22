@@ -51,6 +51,7 @@ $("#background__option").addEventListener("input", () => {
 
 })
 
+
 // image filters:
 
 const generatorFilters = () => {
@@ -96,14 +97,29 @@ $("#inferior__text").addEventListener("input", () => {
 $("#input__check").addEventListener("input", () => {
     const isChecked = $("#input__check").checked
     if (isChecked) {
-        $("#generator__top").classList.add("hidden")
+        $("#generator__top").style.backgroundColor = "rgb(0, 0, 0)"
 
     } else {
-        $("#generator__top").classList.remove("hidden")
+        $("#generator__top").style.backgroundColor = "#ffffff"
 
     }
-
 })
+
+
+// No bottom text
+
+$("#text__input").addEventListener("input", () => {
+    const isChecked = $("#text__input").checked
+    if (isChecked) {
+        $("#generator__bottom").style.backgroundColor = "rgb(0, 0, 0)"
+
+    } else {
+        $("#generator__bottom").style.backgroundColor = "#ffffff"
+
+
+    }
+})
+
 
 // FONTS
 
@@ -119,7 +135,6 @@ $("#fontsize__item").addEventListener("input", () => {
     $("#generator__bottom").style.fontSize = `${$("#fontsize__item").value}px `
 
 })
-
 
 
 //   text alignment
@@ -140,6 +155,28 @@ $("#align__btn--right").addEventListener("click", () => {
     $("#generator__bottom").style.textAlign = "right"
 
 })
+
+// outline buttons
+
+$("#contorn__none").addEventListener("click", () => {
+    $("#generator__top").style.webkitTextStroke = "none"
+})
+
+$("#contorn__light").addEventListener("click", () => {
+    $("#generator__top").style.webkitTextStroke = "1px currentColor" 
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

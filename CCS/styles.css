@@ -96,6 +96,7 @@ body{
     align-items: center;
     margin: 0 auto;
     background-color: var(--color-primary);
+    flex-grow: 1;
 }
 
 .generator__textop{
@@ -122,11 +123,12 @@ body{
 }
 
 .generator__img{
-    width: 768px;
-    height: 350px ;
+    width: 45%;
+    height: 350px;
     background-color: black;
     border: none;
     background-size: cover; 
+    flex-grow: 1;
 }
 
 aside{
@@ -405,4 +407,8 @@ fieldset{
 
 
  } */
+
+ .hidden{
+  display: none;
+ }
 
