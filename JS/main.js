@@ -52,7 +52,7 @@ $("#button__text").addEventListener("click", () => {
  //download image
 
  const downloadImage = () => {
-    domtoimage.toBlob($("#generator__container")).then((blob) => {
+    domtoimage.toBlob($("#generator__meme")).then((blob) => {
         saveAs(blob, 'my-meme.png')
       })
 }
