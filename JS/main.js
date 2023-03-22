@@ -105,7 +105,6 @@ $("#input__check").addEventListener("input", () => {
     }
 })
 
-
 // No bottom text
 
 $("#text__input").addEventListener("input", () => {
@@ -115,8 +114,6 @@ $("#text__input").addEventListener("input", () => {
 
     } else {
         $("#generator__bottom").style.backgroundColor = "#ffffff"
-
-
     }
 })
 
@@ -155,6 +152,32 @@ $("#align__btn--right").addEventListener("click", () => {
     $("#generator__bottom").style.textAlign = "right"
 
 })
+
+
+// text color
+$("#text__color").addEventListener("input", () => {
+    $("#generator__top").style.color = $("#text__color").value
+})
+
+$("#text__color").addEventListener("input", () => {
+    $("#generator__bottom").style.color = $("#text__color").value
+})
+
+
+// text background color
+$("#background__color").addEventListener("input", () => {
+    $("#generator__top").style.backgroundColor = $("#background__color").value
+})
+
+$("#background__color").addEventListener("input", () => {
+    $("#generator__bottom").style.backgroundColor = $("#background__color").value
+})
+
+
+
+
+
+
 
 // outline buttons
 
