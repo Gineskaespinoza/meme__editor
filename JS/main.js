@@ -2,18 +2,18 @@ const $ = (selector) => document.querySelector(selector)
 
 // dark mode:
 
-$("#button__dark").addEventListener("click", () => {
-    const modeChange = $("body").getAttribute("code-light")
-    if (modeChange) {
-        $("#button__light").classList.add("hidden")
-        $("#button__dark").classList.remove("hidden")
-        $("body").removeAttribute("code-light", "light-mode")
-    } else {
-        $("#button__dark").classList.remove("hidden")
-        $("#button__light").classList.add("hidden")
-        $("body").setAttribute("code-light", "light-mode")
-    }
-})
+// $("#button__dark").addEventListener("click", () => {
+//     const modeChange = $("body").getAttribute("code-light")
+//     if (modeChange) {
+//         $("#button__light").classList.add("hidden")
+//         $("#button__dark").classList.remove("hidden")
+//         $("body").removeAttribute("code-light", "light-mode")
+//     } else {
+//         $("#button__dark").classList.remove("hidden")
+//         $("#button__light").classList.add("hidden")
+//         $("body").setAttribute("code-light", "light-mode")
+//     }
+// })
 
 
 // BUTTONS HEADER
@@ -29,6 +29,36 @@ $("#button__text").addEventListener("click", () => {
         $(".image__content").style.display = "none"
     }
  })
+
+
+ $("#button__dark").addEventListener("click", () => {
+    const modeChange = $("body").getAttribute("code-light")
+    if ($("#button__dark").style.display = "none"){
+        $("#button__light").style.display = "block"
+        $("body").setAttribute("code-light", "light-mode")
+    }
+ })
+ 
+ $("#button__light").addEventListener("click", () => {
+     if ($("#button__light").style.display = "none"){
+         $("#button__dark").style.display = "block"
+         $("body").removeAttribute("code-light", "light-mode")
+     }
+  })
+
+
+
+
+ //download image
+
+ const downloadImage = () => {
+    domtoimage.toBlob($("#generator__container")).then((blob) => {
+        saveAs(blob, 'my-meme.png')
+      })
+}
+
+$("#button__download").addEventListener('click', downloadImage)
+
  
 
 // IMAGE SECTION
@@ -77,6 +107,23 @@ $("#saturate__choice").addEventListener("input", generatorFilters)
 $("#invert__choice").addEventListener("input", generatorFilters) 
 
 
+
+//reset filters
+
+const resetFilters = () => {
+    $("#brightness__choice").value = 1
+    $("#opacity__choice").value = 1
+    $("#contrast__choice").value = 100
+    $("#blur__choice").value = 0
+    $("#grayscale__choice").value = 0
+    $("#hue__choice").value = 0
+    $("#saturate__choice").value = 100
+    $("#invert__choice").value = 0
+}
+
+$("#reset__btn").addEventListener("click", resetFilters)
+
+
 // SECTION TEXT
 
 //insert top text:
@@ -97,11 +144,10 @@ $("#inferior__text").addEventListener("input", () => {
 $("#input__check").addEventListener("input", () => {
     const isChecked = $("#input__check").checked
     if (isChecked) {
-        $("#generator__top").style.backgroundColor = "rgb(0, 0, 0)"
+        $("#generator__textop").classList.add("hidden")
 
     } else {
-        $("#generator__top").style.backgroundColor = "#ffffff"
-
+        $("#generator__textop").classList.remove("hidden")
     }
 })
 
@@ -110,13 +156,14 @@ $("#input__check").addEventListener("input", () => {
 $("#text__input").addEventListener("input", () => {
     const isChecked = $("#text__input").checked
     if (isChecked) {
-        $("#generator__bottom").style.backgroundColor = "rgb(0, 0, 0)"
+        $("#generator__bottom").classList.add("hidden")
 
     } else {
-        $("#generator__bottom").style.backgroundColor = "#ffffff"
+        $("#generator__bottom").classList.remove("hidden")
     }
 })
 
+ 
 
 // FONTS
 
@@ -174,11 +221,6 @@ $("#background__color").addEventListener("input", () => {
 })
 
 
-
-
-
-
-
 // outline buttons
 
 $("#contorn__none").addEventListener("click", () => {
@@ -189,6 +231,28 @@ $("#contorn__light").addEventListener("click", () => {
     $("#generator__top").style.webkitTextStroke = "1px currentColor" 
 })
 
+// spacing
+
+$("#spacing__input").addEventListener("input", () => {
+    $("#generator__top").style.padding =  `${$("#spacing__input").value}px ` 
+
+})
+
+$("#spacing__input").addEventListener("input", () => {
+    $("#generator__bottom").style.padding =  `${$("#spacing__input").value}px ` 
+
+})
+
+// line height 
+$("#lineheight__input").addEventListener("input", () => {
+    $("#generator__top").style.lineHeight= $("#lineheight__input").value
+
+})
+
+$("#lineheight__input").addEventListener("input", () => {
+    $("#generator__bottom").style.lineHeight = $("#lineheight__input").value 
+
+})
 
 
 
