@@ -30,6 +30,7 @@ $("#button__text").addEventListener("click", () => {
     }
  })
 
+ // Dark mode
 
  $("#button__dark").addEventListener("click", () => {
     const modeChange = $("body").getAttribute("code-light")
@@ -38,6 +39,8 @@ $("#button__text").addEventListener("click", () => {
         $("body").setAttribute("code-light", "light-mode")
     }
  })
+
+ //Light Mode
  
  $("#button__light").addEventListener("click", () => {
      if ($("#button__light").style.display = "none"){
@@ -45,8 +48,6 @@ $("#button__text").addEventListener("click", () => {
          $("body").removeAttribute("code-light", "light-mode")
      }
   })
-
-
 
 
  //download image
@@ -81,7 +82,6 @@ $("#background__option").addEventListener("input", () => {
 
 })
 
-
 // image filters:
 
 const generatorFilters = () => {
@@ -107,7 +107,6 @@ $("#saturate__choice").addEventListener("input", generatorFilters)
 $("#invert__choice").addEventListener("input", generatorFilters) 
 
 
-
 //reset filters
 
 const resetFilters = () => {
@@ -116,12 +115,21 @@ const resetFilters = () => {
     $("#contrast__choice").value = 100
     $("#blur__choice").value = 0
     $("#grayscale__choice").value = 0
+    $("#sepia__choice").value = 0
     $("#hue__choice").value = 0
     $("#saturate__choice").value = 100
     $("#invert__choice").value = 0
 }
 
 $("#reset__btn").addEventListener("click", resetFilters)
+
+
+const resetImage = () => {
+    $("#generator__square").style.filter = `brightness(${$("#brightness__choice").value = 1}) opacity(${$("#opacity__choice").value = 1}) contrast(${$("#contrast__choice").value = 100}%) blur(${$("#blur__choice").value = 0}px) grayscale(${$("#grayscale__choice").value = 0}%) sepia(${$("#sepia__choice").value = 0}%) hue-rotate(${$("#hue__choice").value = 0}deg) saturate(${$("#saturate__choice").value = 100}%) invert(${$("#invert__choice").value = 0})` 
+}
+
+$("#reset__btn").addEventListener("click", resetImage)
+
 
 
 // SECTION TEXT
@@ -144,10 +152,10 @@ $("#inferior__text").addEventListener("input", () => {
 $("#input__check").addEventListener("input", () => {
     const isChecked = $("#input__check").checked
     if (isChecked) {
-        $("#generator__textop").classList.add("hidden")
+        $("#generator__top").classList.add("hidden")
 
     } else {
-        $("#generator__textop").classList.remove("hidden")
+        $("#generator__top").classList.remove("hidden")
     }
 })
 
@@ -163,7 +171,6 @@ $("#text__input").addEventListener("input", () => {
     }
 })
 
- 
 
 // FONTS
 
@@ -220,16 +227,54 @@ $("#background__color").addEventListener("input", () => {
     $("#generator__bottom").style.backgroundColor = $("#background__color").value
 })
 
+// transparent background
+
+$("#checkbox__background").addEventListener("click", () => {
+    const isChecked = $("#checkbox__background").checked
+    const valueColor = $("#backgroundcolor__image").value
+    if (isChecked){
+        $("#generator__top").style.backgroundColor = "transparent"
+        $("#generator__bottom").style.backgroundColor = "transparent"
+        $("#generator__top").style.position = "absolute"
+        $("#generator__bottom").style.position = "absolute"
+
+    } else {
+        $("#generator__top").style.backgroundColor = valueColor
+        $("#generator__bottom").style.backgroundColor = valueColor
+        $("#generator__top").style.position = "relative"
+        $("#generator__bottom").style.position = "relative"
+    }
+})
+
+
+$("#text__input").addEventListener("input", () => {
+    const isChecked = $("#text__input").checked
+    if (isChecked) {
+        $("#generator__bottom").classList.add("hidden")
+
+    } else {
+        $("#generator__bottom").classList.remove("hidden")
+    }
+})
+
 
 // outline buttons
 
 $("#contorn__none").addEventListener("click", () => {
-    $("#generator__top").style.webkitTextStroke = "none"
+    $("#generator__top").style.webkitTextStroke = "0"
+    $("#generator__bottom").style.webkitTextStroke = "0"
 })
 
 $("#contorn__light").addEventListener("click", () => {
-    $("#generator__top").style.webkitTextStroke = "1px currentColor" 
+    $("#generator__top").style.webkitTextStroke = "1.5px" 
+    $("#generator__bottom").style.webkitTextStroke = "1.5px" 
 })
+
+$("#contorn__dark").addEventListener("click", () => {
+    $("#generator__top").style.webkitTextStroke = "2.5px " 
+    $("#generator__bottom").style.webkitTextStroke = "2.5px" 
+})
+
 
 // spacing
 

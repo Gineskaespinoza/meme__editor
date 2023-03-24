@@ -22,6 +22,7 @@ body{
     --font-size-text: 12px;
     --padding-min: 0 10px;
     --border-radius: 3px;
+    --color-hover-button: #4e5565; 
   }
 
    /* light mode variables:  */
@@ -31,6 +32,7 @@ body{
     --color-background: #fafafa;
     --color-input: #e0e0e0;
     --color-text:#424242;
+    --color-hover-button: #bdbdbd;
 }  
 
 
@@ -59,8 +61,15 @@ body{
     background-color: var(--color-background);
     color: var(--color-text);
     border: none;
-    padding: 25px;
-    font-size: var(--font-size-text)
+    padding: 16px;
+    font-size: var(--font-size-text);
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.button__box:hover{
+  background-color: var(--color-hover-button) ;
 }
 
 .icon-btn{
@@ -80,13 +89,14 @@ body{
     padding: 16px ;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
 }
 
 
 /* // MAIN */
 
 .generator__container{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,12 +106,13 @@ body{
 }
 
 .generator__meme{
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
-  
+  max-width: 100%;
+  height: 600px;
 }
 
 .generator__textop{
@@ -109,8 +120,6 @@ body{
     background-color: white;
     color: black;
     align-items: center;
-    position: static;
- 
 }
 
 .generator__textbottom{
@@ -118,8 +127,6 @@ body{
     background-color: white;
     color: black;
     align-items: center;
-    position: static;
- 
 }
 
 .generator__paragraph{
@@ -138,8 +145,8 @@ body{
     flex-grow: 1;
 }
 
-aside{
-    /* display: none; */
+aside{  
+    display: none;
     width: 20vw;
     height: 100%;
     position: fixed;
@@ -148,7 +155,6 @@ aside{
     z-index: 10;
     background-color: var(--color-secundary);
     overflow: scroll;
-    
 }
 
 .close__btn{
@@ -420,13 +426,29 @@ fieldset{
   transform: translateY(-50%);
 
 
- } */
+ } 
 
  .hidden{
   display: none;
  }
 
 
+/* MEDIAS QUERIES */
+ @media (min-width: 1300px) {
+   aside {
+    display: block;
+  }
 
- @media ()
+  .close__btn{
+    display: none;
+  }
+
+ }
+
+ @media (max-width: 650px) {
+ aside{
+  width: 100%;
+ }
+
+ }
 
