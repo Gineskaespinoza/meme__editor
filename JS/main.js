@@ -1,20 +1,5 @@
 const $ = (selector) => document.querySelector(selector)
 
-// dark mode:
-
-// $("#button__dark").addEventListener("click", () => {
-//     const modeChange = $("body").getAttribute("code-light")
-//     if (modeChange) {
-//         $("#button__light").classList.add("hidden")
-//         $("#button__dark").classList.remove("hidden")
-//         $("body").removeAttribute("code-light", "light-mode")
-//     } else {
-//         $("#button__dark").classList.remove("hidden")
-//         $("#button__light").classList.add("hidden")
-//         $("body").setAttribute("code-light", "light-mode")
-//     }
-// })
-
 
 // BUTTONS HEADER
 
@@ -131,7 +116,6 @@ const resetImage = () => {
 $("#reset__btn").addEventListener("click", resetImage)
 
 
-
 // SECTION TEXT
 
 //insert top text:
@@ -242,7 +226,7 @@ $("#checkbox__background").addEventListener("click", () => {
         $("#generator__top").style.backgroundColor = valueColor
         $("#generator__bottom").style.backgroundColor = valueColor
         $("#generator__top").style.position = "relative"
-        $("#generator__bottom").style.position = "relative"
+        // $("#generator__bottom").style.position = "relative"
     }
 })
 
@@ -298,6 +282,54 @@ $("#lineheight__input").addEventListener("input", () => {
     $("#generator__bottom").style.lineHeight = $("#lineheight__input").value 
 
 })
+
+
+// Close Button
+
+// $("#close__btn").addEventListener("click", () => {
+//     $(".image__content").style.display = "none"
+//     $("#text__content").style.display = "none"
+// })
+
+
+
+// hidden aside
+
+
+const asideHidden = () => {
+    $("#aside").classList.add("hidden")
+}
+
+const asideShow = () => {
+    $("#aside").classList.remove("hidden")
+}
+
+$("#close__btn").addEventListener("click", asideHidden)
+
+$("#button__img").addEventListener("click", asideShow)
+
+
+$("#button__text").addEventListener("click", asideShow)
+
+
+// $("#button__img").addEventListener("click", () => {
+//     if ($(".image__content").style.display = "block"){
+//         $(".text__container").style.display = "none"
+//     }
+//  })
+ 
+//  $("#button__text").addEventListener("click", () => {
+//      if ($(".text__container").style.display = "block"){
+//          $(".image__content").style.display = "none"
+//      }
+//   })
+
+
+
+
+
+
+
 
 
 
