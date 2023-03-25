@@ -47,7 +47,7 @@ $("#button__download").addEventListener('click', downloadImage)
 
  
 
-// IMAGE SECTION
+// -------------------------------IMAGE SECTION------------------------------------
 
 // insert background image:
 $("#image__url").addEventListener("input", () => {
@@ -116,7 +116,7 @@ const resetImage = () => {
 $("#reset__btn").addEventListener("click", resetImage)
 
 
-// SECTION TEXT
+// -----------------------------------SECTION TEXT------------------------------
 
 //insert top text:
 
@@ -215,18 +215,20 @@ $("#background__color").addEventListener("input", () => {
 
 $("#checkbox__background").addEventListener("click", () => {
     const isChecked = $("#checkbox__background").checked
-    const valueColor = $("#backgroundcolor__image").value
+    // const valueColor = $("#background__color").value
     if (isChecked){
         $("#generator__top").style.backgroundColor = "transparent"
         $("#generator__bottom").style.backgroundColor = "transparent"
         $("#generator__top").style.position = "absolute"
         $("#generator__bottom").style.position = "absolute"
+  
 
     } else {
-        $("#generator__top").style.backgroundColor = valueColor
-        $("#generator__bottom").style.backgroundColor = valueColor
-        $("#generator__top").style.position = "relative"
-        // $("#generator__bottom").style.position = "relative"
+        // $("#text__backgroundcolor").innerText = valueColor.toUppercase()
+        // $("#generator__top").style.backgroundColor = valueColor
+        // $("#generator__bottom").style.backgroundColor = valueColor
+        $("#generator__top").style.position = "static"
+        $("#generator__bottom").style.position = "static"
     }
 })
 
@@ -284,15 +286,6 @@ $("#lineheight__input").addEventListener("input", () => {
 })
 
 
-// Close Button
-
-// $("#close__btn").addEventListener("click", () => {
-//     $(".image__content").style.display = "none"
-//     $("#text__content").style.display = "none"
-// })
-
-
-
 // hidden aside
 
 
@@ -312,17 +305,13 @@ $("#button__img").addEventListener("click", asideShow)
 $("#button__text").addEventListener("click", asideShow)
 
 
-// $("#button__img").addEventListener("click", () => {
-//     if ($(".image__content").style.display = "block"){
-//         $(".text__container").style.display = "none"
-//     }
-//  })
- 
-//  $("#button__text").addEventListener("click", () => {
-//      if ($(".text__container").style.display = "block"){
-//          $(".image__content").style.display = "none"
-//      }
-//   })
+const asideNone = window.matchMedia( "(max-width: 700px)");
+
+if (asideNone.matches) {
+    $("#aside").classList.add("hidden")
+} else {
+    $("#aside").classList.remove("hidden")
+}
 
 
 
