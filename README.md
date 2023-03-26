@@ -1,7 +1,7 @@
 # ***This is my Meme Generator Project.*** 👋
 
 ## PREVIEW
- ![Meme Generator](generator-img.png) 
+ ![Meme Generator](generator-img.png)
 
 
 ## ¡Let's talk about the project!
