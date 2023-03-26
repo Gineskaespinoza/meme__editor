@@ -96,17 +96,15 @@ body{
 /* // MAIN */
 
 .generator__container{
-    /* width: 100vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    /* background-color: var(--color-primary); */
 }
 
 .generator__meme{
-  width: 600px;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,7 +128,7 @@ body{
 }
 
 .generator__paragraph{
-    padding: 35px;
+    padding: 25px;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -146,7 +144,6 @@ body{
 }
 
 aside{  
-    /* display: none; */
     width: 20vw;
     height: 100%;
     position: fixed;
@@ -346,8 +343,8 @@ input[type=range].filter__choice {
   }
   
 
-/* 
-  TEXT SECTION */
+
+ /* ----------------------------TEXT SECTION ----------------------- */
 
 label, span{
   font-size: 12px;
@@ -373,7 +370,6 @@ fieldset{
 }
 
 .fontsize__btn{
-  /* width: 25%; */
   height: 35px;
   background-color: var(--color-input);
   border: none;
@@ -385,7 +381,6 @@ fieldset{
 }
 
 .align__btn{
-  /* width: 25%; */
   height: 35px;
   background-color: var(--color-input);
   border: none;
@@ -437,7 +432,7 @@ fieldset{
 
  .hidden{
   display: none;
- }
+ } 
 
 
 /* MEDIAS QUERIES */
