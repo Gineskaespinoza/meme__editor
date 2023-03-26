@@ -1,15 +1,15 @@
 # ***This is my Meme Generator Project.*** 👋
 
 ## PREVIEW
- ![Meme Generator](generator-img.png)
+ ![Meme Generator Project](./ASSETS/generator-meme.png)
 
 
-## ¡Let's talk about the project!
+## ¡Let's talk about the project! 
 
 ### This is part of the closing of the second module of the ADA ITW front end development course.
 
 
-## CONTENT:
+## CONTENT: 📂
 
 ### 1- Section to modify image :
 
@@ -38,11 +38,11 @@
  **Meme Generator** is an application with which you can manipulate the text and image of your meme and dynamically modify its content and properties. You can also download your meme to use or share it wherever you want.
 
  
- ## Accesibility 
+ ## Accesibility 🅰️
 
  This work has accessibility to browsers such as Google Chrome and Mozzilla Firefox
 
- ##  APPLIED TECHNOLOGIES
+ ##  APPLIED TECHNOLOGIES ✅
 
  1. HTML: 💬
 
@@ -51,9 +51,9 @@
  3. JavaScript 💬
 
 
-##### Link Github Repository: 😄
+##### Link Github Repository: 📌
 [click here](https://github.com/Gineskaespinoza/meme__editor)
 
 
-#### Link Deployment:
+#### Link Deployment: 
 [To view my project, click here](https://gineskaespinoza.github.io/meme__editor/)

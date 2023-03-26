@@ -24,22 +24,22 @@
         <h1 class="tittle">Generador de Memes</h1>
         <section class="buttons__container">
             <button class="button__box" id="button__img">
-                <i class="fas fa-file-image icon-btn"></i>Imagen
+                <i class="fas fa-file-image icon-btn" aria-hidden="true"></i>Imagen
             </button>
             <button class="button__box" id="button__text">
-                <i class="fas fa-font icon-btn"></i>Texto
+                <i class="fas fa-font icon-btn" aria-hidden="true"></i>Texto
             </button>
             <button class="button__box" id="button__dark">
-                <i class="far fa-lightbulb icon-btn" id="lightbulb__off"></i>Modo oscuro
+                <i class="far fa-lightbulb icon-btn" id="lightbulb__off" aria-hidden="true" aria-label="dark mode"></i>Modo oscuro
             </button>
-            <button class="button__box" id="button__light" hidden>
-                <i class="far fa-lightbulb icon-btn" id="lightbulb__on"></i>Modo Claro
+            <button class="button__box" id="button__light" aria-label="light mode" hidden>
+                <i class="far fa-lightbulb icon-btn" id="lightbulb__on" aria-hidden="true"></i>Modo Claro
             </button>
         </section>
     </header>
     <main class="central__container">
         <section class="generator__container" id="generator__container">
-            <section class="generator__meme" id="generator__meme">
+            <section class="generator__meme" id="generator__meme" aria-label="meme image">
                 <article class="generator__textop" id="generator__textop">
                     <p class="generator__paragraph" id="generator__top" value="top text">TOP TEXT</p>
                 </article>
@@ -50,15 +50,15 @@
                 </article>
             </section>
             <button type="button" class="button__download" id="button__download">
-                <i class="fas fa-download"></i>Descargar Meme
+                <i class="fas fa-download" aria-hidden="true"></i>Descargar Meme
             </button>
         </section>
 
         <!-- ASIDE -->
         <aside class="aside" id="aside">
             <article class="close__button">
-                <button class="close__btn" id="close__btn">
-                    <i class="fas fa-times"></i>
+                <button class="close__btn" id="close__btn" aria-label="close panel">
+                    <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
             </article>
 
@@ -68,7 +68,7 @@
                     <h2 class="image__subtittle">IMAGEN</h2>
                     <fieldset class="image__item">
                         <h3 class="subtittle">URL</h3>
-                        <input type="text" class="image__url" id="image__url">
+                        <input type="text" class="image__url" id="image__url" aria-label="image url">
                     </fieldset>
                 </section>
 
@@ -77,11 +77,11 @@
                     <h3 class="subtittle">FONDO</h3>
                     <section class="background__options">
                         <fieldset class="background__item">
-                            <input type="color" class="backgroundcolor__img" id="backgroundcolor__image" value="#fff">
+                            <input type="color" class="backgroundcolor__img" id="backgroundcolor__image" value="#fff" aria-label="background color">
                             <span id="backgroundcolor__span">#COLOR</span>
                         </fieldset>
                         <fieldset class="background__select" id="background__select">
-                            <select name="" class="background__option" id="background__option">
+                            <select name="" class="background__option" id="background__option" aria-label="background blend mode">
                                 <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
@@ -169,7 +169,7 @@
                 <!-- FONTS -->
                 <article class="font__box">
                     <h3 class="subtittle">FUENTE</h3>
-                    <select name="Familia de fuentes" id="font__selector" class="font__select">
+                    <select name="Familia de fuentes" id="font__selector" class="font__select" aria-label="font family text">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="Helvetica">Helvetica</option>
@@ -182,19 +182,18 @@
                 <!-- FONTS SIZE -->
                 <article class="fontsize__container">
                     <fieldset class="fontsize__box">
-                        <input type="number" name="font size" class="fontsize__btn" id="fontsize__item" min="16"
-                            max="60" value="16">
+                        <input type="number" name="font size" class="fontsize__btn" id="fontsize__item" aria-label="font size text" min="16" max="60" value="16">
                     </fieldset>
 
                     <!-- ALIGN-->
                     <fieldset class="align__item" id="align__item">
-                        <button class="align__btn" id="align__btn--left">
+                        <button class="align__btn" id="align__btn--left" aria-label="align left">
                             <i class="fas fa-align-left" aria-hidden="true"></i>
                         </button>
-                        <button class="align__btn" id="align__btn--center" aria-label="Alinear texto al centro">
+                        <button class="align__btn" id="align__btn--center" aria-label="Align center">
                             <i class="fas fa-align-center" aria-hidden="true"></i>
                         </button>
-                        <button class="align__btn" id="align__btn--right" aria-label="Alinear texto a la derecha">
+                        <button class="align__btn" id="align__btn--right" aria-label="Aling right">
                             <i class="fas fa-align-right" aria-hidden="true"></i>
                         </button>
                     </fieldset>
@@ -206,22 +205,21 @@
                     <article class="color__text" id="color__text">
                         <h4 class="subtittle">COLOR</h4>
                         <fieldset class="color__box">
-                            <input type="color" name="text color" class="text__color" id="text__color" value="#ffffff">
+                            <input type="color" name="text color" class="text__color" id="text__color" value="#ffffff" aria-label="text color">
                             <span class="texts__color">#FFFFFF</span>
                         </fieldset>
                     </article>
                     <article class="color__background" id="color__background">
                         <h4 class="subtittle">FONDO</h4>
                         <fieldset class="color__box">
-                            <input name="Color fondo de texto" type="color" id="background__color" class="background__color"
-                                id="background__color" value="#FFF">
+                            <input name="Color fondo de texto" type="color" class="background__color" id="background__color" aria-label="background color text" value="#FFF">
                             <span class="text__backgroundcolor">#FFFFFF</span>
                         </fieldset>
                     </article>
                 </section>
                 <fieldset>
                     <label for="checkbox background">Fondo Transparente</label>
-                    <input type="checkbox" class="checkbox__background" id="checkbox__background">
+                    <input type="checkbox" class="checkbox__background" id="checkbox__background" aria-label="checkbox background">
                 </fieldset>
                 <section class="contorn__box">
                     <h4 class="subtittle">CONTORNO</h4>
@@ -244,7 +242,7 @@
                 <!-- LINE HEIGHT -->
                 <article class="line__height" id="line__height">
                     <h4 class="subtittle">INTERLINEADO</h4>
-                    <select id="lineheight__input" class="lineheight__input" aria-label="interlineado">
+                    <select id="lineheight__input" class="lineheight__input" aria-label="line height text">
                         <option value="0.8">0.8</option>
                         <option value="1" selected="">1</option>
                         <option value="1.2">1.2</option>

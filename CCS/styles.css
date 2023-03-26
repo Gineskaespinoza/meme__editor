@@ -45,7 +45,7 @@ body{
 
 .tittle{
     text-align: center;
-    margin-top: 20px;
+    padding-top: 40px;
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--color-text);
@@ -74,12 +74,10 @@ body{
 
 .icon-btn{
     margin-right: 6px;
-
 }
 
 .fa-lightbulb{
   border-color: var(--color-text);
-
 }
 
 .button__download{
@@ -104,13 +102,14 @@ body{
 }
 
 .generator__meme{
-  width: 70vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   max-width: 600px;
-  height: 600px;
+  height: 460px;
+  padding: 0 30px;
 }
 
 .generator__textop{
@@ -130,7 +129,7 @@ body{
 .generator__paragraph{
     padding: 25px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     position: static;
 }
@@ -174,7 +173,6 @@ aside{
 
  .image__content{
     padding: 0 12px;
-  
 } 
 
 .image__subtittle, .text__tittle{
@@ -183,6 +181,7 @@ aside{
     margin-top: 20px;
     color: var(--color-text)
 }
+
 .image__item{
     display: flex;
     flex-direction: column;
@@ -233,7 +232,6 @@ aside{
     border: none;
     margin-top: 15px;
     color: var(--color-text);
-    
 }
 
 .filter__choice{
@@ -255,11 +253,13 @@ input[type=range].filter__choice {
     width: 100%;
     margin: 1.8px 0;
     background-color: transparent;
-    -webkit-appearance: none;
+    -webkit-appearance: none
   }
+
   input[type=range].filter__choice:focus {
     outline: none;
   }
+
   input[type=range].filter__choice::-webkit-slider-runnable-track {
     background: #a9a9a9;
     border: 0.5px solid #110101;
@@ -268,6 +268,7 @@ input[type=range].filter__choice {
     height: 8.4px;
     cursor: pointer;
   }
+
   input[type=range].filter__choice::-webkit-slider-thumb {
     margin-top: -2.3px;
     width: 11px;
@@ -278,9 +279,11 @@ input[type=range].filter__choice {
     cursor: pointer;
     -webkit-appearance: none;
   }
+
   input[type=range].filter__choice:focus::-webkit-slider-runnable-track {
     background: #b8b8b8;
   }
+
   input[type=range].filter__choice::-moz-range-track {
     background: #a9a9a9;
     border: 0.5px solid #110101;
@@ -289,6 +292,7 @@ input[type=range].filter__choice {
     height: 8.4px;
     cursor: pointer;
   }
+
   input[type=range].filter__choice::-moz-range-thumb {
     width: 11px;
     height: 12px;
@@ -297,6 +301,7 @@ input[type=range].filter__choice {
     border-radius: 3px;
     cursor: pointer;
   }
+
   input[type=range].filter__choice::-ms-track {
     background: transparent;
     border-color: transparent;
@@ -306,16 +311,19 @@ input[type=range].filter__choice {
     height: 8.4px;
     cursor: pointer;
   }
+
   input[type=range].filter__choice::-ms-fill-lower {
     background: #9a9a9a;
     border: 0.5px solid #110101;
     border-radius: 8.4px;
   }
+
   input[type=range].filter__choice::-ms-fill-upper {
     background: #a9a9a9;
     border: 0.5px solid #110101;
     border-radius: 8.4px;
   }
+
   input[type=range].filter__choice::-ms-thumb {
     width: 11px;
     height: 12px;
@@ -326,12 +334,15 @@ input[type=range].filter__choice {
     margin-top: 0px;
     /*Needed to keep the Edge thumb centred*/
   }
+
   input[type=range].filter__choice:focus::-ms-fill-lower {
     background: #a9a9a9;
   }
+
   input[type=range].filter__choice:focus::-ms-fill-upper {
     background: #b8b8b8;
   }
+
   /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
   how to remove the virtical space around the range input in IE*/
   @supports (-ms-ime-align:auto) {
@@ -342,8 +353,6 @@ input[type=range].filter__choice {
     }
   }
   
-
-
  /* ----------------------------TEXT SECTION ----------------------- */
 
 label, span{
@@ -366,7 +375,6 @@ fieldset{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  
 }
 
 .fontsize__btn{
@@ -421,19 +429,16 @@ fieldset{
   padding: 5px 10px;
 }
 
-
  .texts__color, .text__backgroundcolor{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-
-
  } 
 
  .hidden{
   display: none;
  } 
-
+ 
 
 /* MEDIAS QUERIES */
  @media (min-width: 1300px) {
@@ -454,9 +459,19 @@ fieldset{
 
  .tittle{
   font-size: 1.7rem;
+  margin-left: 10px;
+ }
+
+ .generator__meme{
+  height: 400px;
+ }
+
+ .generator__paragraph{
+  padding: 15px;
  }
 
  }
+
 
 
 

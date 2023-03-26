@@ -306,7 +306,6 @@ $("#button__text").addEventListener("click", asideShow)
 
 
 
-
 const asideNone = window.matchMedia( "(max-width: 700px)");
 
 if (asideNone.matches) {
