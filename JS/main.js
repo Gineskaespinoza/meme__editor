@@ -1,7 +1,7 @@
 const $ = (selector) => document.querySelector(selector)
 
 
-// BUTTONS HEADER
+// Buttons header
 
 $("#button__img").addEventListener("click", () => {
    if ($(".image__content").style.display = "block"){
@@ -215,23 +215,16 @@ $("#background__color").addEventListener("input", () => {
 
 $("#checkbox__background").addEventListener("click", () => {
     const isChecked = $("#checkbox__background").checked
-    // const valueColor = $("#background__color").value
     if (isChecked){
         $("#generator__top").style.backgroundColor = "transparent"
         $("#generator__bottom").style.backgroundColor = "transparent"
         $("#generator__top").style.position = "absolute"
         $("#generator__bottom").style.position = "absolute"
-  
-
     } else {
-        // $("#text__backgroundcolor").innerText = valueColor.toUppercase()
-        // $("#generator__top").style.backgroundColor = valueColor
-        // $("#generator__bottom").style.backgroundColor = valueColor
         $("#generator__top").style.position = "static"
         $("#generator__bottom").style.position = "static"
     }
 })
-
 
 $("#text__input").addEventListener("input", () => {
     const isChecked = $("#text__input").checked
@@ -303,7 +296,6 @@ $("#button__img").addEventListener("click", asideShow)
 
 
 $("#button__text").addEventListener("click", asideShow)
-
 
 
 const asideNone = window.matchMedia( "(max-width: 700px)");

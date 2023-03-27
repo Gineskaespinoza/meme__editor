@@ -14,25 +14,25 @@
 
 ### 1- Section to modify image:
 
--- Add image with URL
--- Change background color
--- Change blend blackground mode
--- Background color image
--- Filters
--- Reset filters
+- Add image with URL
+- Change background color
+- Change blend blackground mode
+- Background color image
+- Filters
+- Reset filters
 
 ### 2- Section to modify text: 
 
--- Edit top and bottom text
--- Remove text
--- Modify font family
--- Add font size
--- Change text color 
--- Modify background color text
--- Transparent background
--- Change text padding
--- Add text line height
--- Add alignment
+- Edit top and bottom text
+- Remove text
+- Modify font family
+- Add font size
+- Change text color 
+- Modify background color text
+- Transparent background
+- Change text padding
+- Add text line height
+- Add alignment
 
 >## FUNCTIONALITY⚡
 
@@ -46,16 +46,20 @@
 
  >## APPLIED TECHNOLOGIES ✅
 
- 1. HTML: 💬
+ 1. [HTML5](https://developer.mozilla.org/es/docs/Web/HTML) 💬
 
- 2. CCS: 💬
+ 2. [CCS](https://developer.mozilla.org/es/docs/Web/CSS) 💬
 
- 3. JavaScript 💬
+ 3. [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) 💬
 
->##### Link Github Repository: 📌
+
+
+>### Link Github Repository: 📌
 [click here](https://github.com/Gineskaespinoza/meme__editor)
 
 ---
 
->#### Link Deployment: 
-[To view my project, click here](https://gineskaespinoza.github.io/meme__editor/)
+
+
+>### Link Deployment: 
+[To view my project, click here:](https://gineskaespinoza.github.io/meme__editor/)
